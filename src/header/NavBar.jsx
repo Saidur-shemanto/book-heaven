@@ -10,7 +10,7 @@ const NavBar = () => {
 
     return (
         <>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,7 +20,7 @@ const NavBar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Book Heaven</a>
+                    <a className="btn btn-ghost text-base lg:text-xl">Book Heaven</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

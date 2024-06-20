@@ -1,98 +1,98 @@
 [
     {
         "bookId": 1,
-        "bookName": "The Enchanted Forest",
-        "author": "Alice Green",
-        "image": "https://example.com/images/enchanted_forest.jpg",
-        "review": "A magical journey through a world of fantasy and adventure.",
-        "totalPages": 350,
-        "rating": 4.5,
-        "category": "Fantasy",
+        "bookName": "Road Ends",
+        "author": "Mary Lawson",
+        "image": "../media/img1.png",
+        "review": "An evocative tale of family dynamics in a small Canadian town.",
+        "totalPages": 320,
+        "rating": 4.3,
+        "category": "Fiction",
         "tags": [
-            "Fantasy",
-            "Adventure"
+            "Family",
+            "Drama"
         ],
-        "publisher": "Mystic Publishers",
-        "yearOfPublishing": 2019
+        "publisher": "Knopf",
+        "yearOfPublishing": 2013
     },
     {
         "bookId": 2,
-        "bookName": "Mystery of the Lost Island",
-        "author": "John Smith",
-        "image": "https://example.com/images/lost_island.jpg",
-        "review": "A thrilling mystery that keeps you on the edge of your seat.",
-        "totalPages": 275,
-        "rating": 4.2,
-        "category": "Mystery",
+        "bookName": "Stoner",
+        "author": "John Williams",
+        "image": "../media/img2.png",
+        "review": "A deeply moving portrayal of an ordinary man's life.",
+        "totalPages": 288,
+        "rating": 4.6,
+        "category": "Literary Fiction",
         "tags": [
-            "Mystery",
-            "Thriller"
+            "Literary",
+            "Classic"
         ],
-        "publisher": "Adventure House",
-        "yearOfPublishing": 2021
+        "publisher": "New York Review Books Classics",
+        "yearOfPublishing": 1965
     },
     {
         "bookId": 3,
-        "bookName": "Cooking with Love",
-        "author": "Emma Brown",
-        "image": "https://example.com/images/cooking_with_love.jpg",
-        "review": "Delicious recipes and heartwarming stories from the kitchen.",
-        "totalPages": 200,
-        "rating": 4.8,
-        "category": "Cooking",
+        "bookName": "Never Let Me Go",
+        "author": "Kazuo Ishiguro",
+        "image": "../media/img3.png",
+        "review": "A haunting novel about love, loss, and the essence of humanity.",
+        "totalPages": 288,
+        "rating": 4.1,
+        "category": "Science Fiction",
         "tags": [
-            "Cooking",
-            "Lifestyle"
+            "Dystopian",
+            "Science Fiction"
         ],
-        "publisher": "Gourmet Press",
-        "yearOfPublishing": 2018
+        "publisher": "Faber and Faber",
+        "yearOfPublishing": 2005
     },
     {
         "bookId": 4,
-        "bookName": "The Science of Tomorrow",
-        "author": "Dr. Mark Wilson",
-        "image": "https://example.com/images/science_of_tomorrow.jpg",
-        "review": "An insightful look into the future of science and technology.",
-        "totalPages": 420,
-        "rating": 4.7,
-        "category": "Science",
+        "bookName": "Vile Bodies",
+        "author": "Evelyn Waugh",
+        "image": "../media/img4.png",
+        "review": "A satirical look at the bright young things of the 1920s.",
+        "totalPages": 336,
+        "rating": 4.0,
+        "category": "Satire",
         "tags": [
-            "Science",
-            "Technology"
+            "Satire",
+            "Classic"
         ],
-        "publisher": "Future Insights",
-        "yearOfPublishing": 2020
+        "publisher": "Chapman & Hall",
+        "yearOfPublishing": 1930
     },
     {
         "bookId": 5,
-        "bookName": "Journey to the Unknown",
-        "author": "Laura Davis",
-        "image": "https://example.com/images/journey_unknown.jpg",
-        "review": "An exhilarating adventure through uncharted territories.",
-        "totalPages": 310,
-        "rating": 4.4,
-        "category": "Adventure",
+        "bookName": "Us",
+        "author": "David Nicholls",
+        "image": "../media/img5.png",
+        "review": "A poignant and humorous story about a family on the brink of change.",
+        "totalPages": 400,
+        "rating": 4.2,
+        "category": "Contemporary Fiction",
         "tags": [
-            "Adventure",
-            "Travel"
+            "Contemporary",
+            "Family"
         ],
-        "publisher": "Explorer's Press",
-        "yearOfPublishing": 2017
+        "publisher": "Hodder & Stoughton",
+        "yearOfPublishing": 2014
     },
     {
         "bookId": 6,
-        "bookName": "The Art of Mindfulness",
-        "author": "Michael Lee",
-        "image": "https://example.com/images/art_of_mindfulness.jpg",
-        "review": "A guide to finding peace and mindfulness in everyday life.",
-        "totalPages": 180,
-        "rating": 4.9,
-        "category": "Self-Help",
+        "bookName": "Atonement",
+        "author": "Ian McEwan",
+        "image": "../media/img6.png",
+        "review": "A profound novel about love, war, and the power of storytelling.",
+        "totalPages": 371,
+        "rating": 4.4,
+        "category": "Historical Fiction",
         "tags": [
-            "Self-Help",
-            "Mindfulness"
+            "Historical",
+            "Romance"
         ],
-        "publisher": "Harmony Books",
-        "yearOfPublishing": 2022
+        "publisher": "Jonathan Cape",
+        "yearOfPublishing": 2001
     }
 ]
