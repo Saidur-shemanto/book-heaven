@@ -1,0 +1,11 @@
+.navlist.active {
+    border: 1px solid #23BE0A;
+    background-color: white !important;
+    color: black !important;
+
+}
+
+.navlist.active:hover {
+    background-color: #23BE0A !important;
+    color: white !important;
+}

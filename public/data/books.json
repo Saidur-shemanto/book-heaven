@@ -1,0 +1,98 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "The Enchanted Forest",
+        "author": "Alice Green",
+        "image": "https://example.com/images/enchanted_forest.jpg",
+        "review": "A magical journey through a world of fantasy and adventure.",
+        "totalPages": 350,
+        "rating": 4.5,
+        "category": "Fantasy",
+        "tags": [
+            "Fantasy",
+            "Adventure"
+        ],
+        "publisher": "Mystic Publishers",
+        "yearOfPublishing": 2019
+    },
+    {
+        "bookId": 2,
+        "bookName": "Mystery of the Lost Island",
+        "author": "John Smith",
+        "image": "https://example.com/images/lost_island.jpg",
+        "review": "A thrilling mystery that keeps you on the edge of your seat.",
+        "totalPages": 275,
+        "rating": 4.2,
+        "category": "Mystery",
+        "tags": [
+            "Mystery",
+            "Thriller"
+        ],
+        "publisher": "Adventure House",
+        "yearOfPublishing": 2021
+    },
+    {
+        "bookId": 3,
+        "bookName": "Cooking with Love",
+        "author": "Emma Brown",
+        "image": "https://example.com/images/cooking_with_love.jpg",
+        "review": "Delicious recipes and heartwarming stories from the kitchen.",
+        "totalPages": 200,
+        "rating": 4.8,
+        "category": "Cooking",
+        "tags": [
+            "Cooking",
+            "Lifestyle"
+        ],
+        "publisher": "Gourmet Press",
+        "yearOfPublishing": 2018
+    },
+    {
+        "bookId": 4,
+        "bookName": "The Science of Tomorrow",
+        "author": "Dr. Mark Wilson",
+        "image": "https://example.com/images/science_of_tomorrow.jpg",
+        "review": "An insightful look into the future of science and technology.",
+        "totalPages": 420,
+        "rating": 4.7,
+        "category": "Science",
+        "tags": [
+            "Science",
+            "Technology"
+        ],
+        "publisher": "Future Insights",
+        "yearOfPublishing": 2020
+    },
+    {
+        "bookId": 5,
+        "bookName": "Journey to the Unknown",
+        "author": "Laura Davis",
+        "image": "https://example.com/images/journey_unknown.jpg",
+        "review": "An exhilarating adventure through uncharted territories.",
+        "totalPages": 310,
+        "rating": 4.4,
+        "category": "Adventure",
+        "tags": [
+            "Adventure",
+            "Travel"
+        ],
+        "publisher": "Explorer's Press",
+        "yearOfPublishing": 2017
+    },
+    {
+        "bookId": 6,
+        "bookName": "The Art of Mindfulness",
+        "author": "Michael Lee",
+        "image": "https://example.com/images/art_of_mindfulness.jpg",
+        "review": "A guide to finding peace and mindfulness in everyday life.",
+        "totalPages": 180,
+        "rating": 4.9,
+        "category": "Self-Help",
+        "tags": [
+            "Self-Help",
+            "Mindfulness"
+        ],
+        "publisher": "Harmony Books",
+        "yearOfPublishing": 2022
+    }
+]
