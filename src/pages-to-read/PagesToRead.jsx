@@ -21,8 +21,8 @@ export default function PagesToRead() {
 
     return (
         <BarChart
-            width={500}
-            height={300}
+            width={900}
+            height={600}
             data={readBooks}
             margin={{
                 top: 20,
@@ -35,7 +35,7 @@ export default function PagesToRead() {
             <XAxis dataKey="bookName" />
             <YAxis />
             <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-                {data.map((entry, index) => (
+                {readBooks.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={colors[index % 20]} />
                 ))}
             </Bar>

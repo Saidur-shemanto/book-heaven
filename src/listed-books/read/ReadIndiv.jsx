@@ -1,6 +1,7 @@
 import { CiLocationOn } from "react-icons/ci";
 import { GoPeople } from "react-icons/go";
 import { IoDocumentTextOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 const ReadIndiv = ({ book }) => {
     return (
         <div className="flex gap-6 border rounded-2xl p-6">
@@ -21,13 +22,13 @@ const ReadIndiv = ({ book }) => {
 
                     </div>
                 </div>
-                <div className="flex">
-                    <div className="flex justify-center items-center">
+                <div className="flex gap-5">
+                    <div className="flex justify-center items-center gap-2">
                         <GoPeople />
-                        <p>Publisher: {book.pubisher}</p>
+                        <p>Publisher: {book.publisher}</p>
 
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center gap-2">
                         <IoDocumentTextOutline />
                         <p>Page {book.totalPages}</p>
                     </div>
@@ -36,7 +37,7 @@ const ReadIndiv = ({ book }) => {
                 <div className="flex">
                     <p className="rounded-full bg-[#328EFF26] text-[#328EFF] p-3">Category: {book.category}</p>
                     <p className="rounded-full bg-[#FFAC3326] text-[#FFAC33]  p-3">Ratings: {book.rating}</p>
-                    <button className="rounded-full bg-[#23BE0A] text-white p-3">View Details</button>
+                    <a href=''><button className="rounded-full bg-[#23BE0A] text-white p-3">View Details</button></a>
                 </div>
             </div>
 
