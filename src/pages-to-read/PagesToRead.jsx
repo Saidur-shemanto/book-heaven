@@ -1,4 +1,4 @@
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { getRead } from '../utility/localStorage';
 import { useLoaderData } from 'react-router-dom';
 export default function PagesToRead() {
@@ -20,26 +20,28 @@ export default function PagesToRead() {
     };
 
     return (
-        <BarChart
-            width={900}
-            height={600}
-            data={readBooks}
-            margin={{
-                top: 20,
-                right: 30,
-                left: 20,
-                bottom: 5,
-            }}
-        >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="bookName" />
-            <YAxis />
-            <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-                {readBooks.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-                ))}
-            </Bar>
-        </BarChart>
+        <ResponsiveContainer height={600}>
+            <BarChart
+                width={900}
+                height={600}
+                data={readBooks}
+                margin={{
+                    top: 20,
+                    right: 30,
+                    left: 20,
+                    bottom: 5,
+                }}
+            >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="bookName" />
+                <YAxis />
+                <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+                    {readBooks.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+                    ))}
+                </Bar>
+            </BarChart>
+        </ResponsiveContainer>
 
 
     )

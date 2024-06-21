@@ -9,7 +9,7 @@ const Authors = () => {
             .then(data => setAuthors(data))
     }, [])
     return (
-        <div className="grid  grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {authors.map(author => <Author key={author.id} author={author}></Author>)}
 
         </div>

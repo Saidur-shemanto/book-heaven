@@ -3,7 +3,7 @@ import { GoPeople } from "react-icons/go";
 import { IoDocumentTextOutline } from "react-icons/io5";
 const WishIndiv = ({ book }) => {
     return (
-        <div className="flex gap-6 border rounded-2xl p-6">
+        <div className="flex flex-col lg:flex-row gap-6 border rounded-2xl p-6">
             <div className="w-[12rem] h-[15rem] flex justify-center items-center bg-[#1313130D] rounded-2xl">
                 <img className="w-[8rem] h-[12rem]" src={book.image} alt="" />
             </div>
@@ -33,7 +33,7 @@ const WishIndiv = ({ book }) => {
                     </div>
                 </div>
                 <hr />
-                <div className="flex">
+                <div className="flex gap-3">
                     <p className="rounded-full bg-[#328EFF26] text-[#328EFF] p-3">Category: {book.category}</p>
                     <p className="rounded-full bg-[#FFAC3326] text-[#FFAC33]  p-3">Ratings: {book.rating}</p>
                     <button className="rounded-full bg-[#23BE0A] text-white p-3">View Details</button>

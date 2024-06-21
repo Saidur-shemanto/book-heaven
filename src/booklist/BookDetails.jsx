@@ -1,18 +1,31 @@
 import { useLoaderData, useParams } from "react-router-dom"
 import { setRead, setWish } from "../utility/localStorage"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function BookDetails() {
     const id = useParams()
     const books = useLoaderData()
     const book = books.find(book => book.bookId === parseInt(id.bookId))
     const handleRead = () => {
-        setRead(String(id.bookId))
+        const res = setRead(String(id.bookId))
+        if (res) {
+            toast.success("Added to read!");
+        } else {
+            toast.error("Already added to read!");
+        }
+
 
 
 
     }
     const handleWish = () => {
-        setWish(String(id.bookId))
+        const res = setWish(String(id.bookId))
+        if (res) {
+            toast.success("Added to WishList");
+        } else {
+            toast.error("Already has been read!");
+        }
     }
 
 
@@ -39,9 +52,10 @@ export default function BookDetails() {
                     <p>Rating: <span className="font-semibold">{book.rating}</span></p>
                 </div>
                 <div className="flex gap-4">
-                    <button onClick={handleRead} className="btn px-7 py-4">Read</button>
-                    <button onClick={handleWish} className="btn bg-[#50B1C9] px-7 py-4">WishList</button>
+                    <button onClick={handleRead} className="btn px-7 py-4 ">Read</button>
+                    <button onClick={handleWish} className="btn bg-[#50B1C9] px-7 py-4 text-white">WishList</button>
                 </div>
+                <ToastContainer />
             </div>
 
 
