@@ -1,0 +1,44 @@
+[
+    {
+        "authorName": "Mary Lawson",
+        "authorPic": "../media/authors/mary.png",
+        "authorGenre": "Fiction",
+        "totalNumberOfBooks": 4,
+        "age": 74
+    },
+    {
+        "authorName": "John Williams",
+        "authorPic": "../media/authors/john.png",
+        "authorGenre": "Literary Fiction",
+        "totalNumberOfBooks": 4,
+        "age": 71
+    },
+    {
+        "authorName": "Kazuo Ishiguro",
+        "authorPic": "../media/authors/kazuo.png",
+        "authorGenre": "Science Fiction, Literary Fiction",
+        "totalNumberOfBooks": 8,
+        "age": 69
+    },
+    {
+        "authorName": "Evelyn Waugh",
+        "authorPic": "../media/authors/evelyn.png",
+        "authorGenre": "Satire, Fiction",
+        "totalNumberOfBooks": 16,
+        "age": 62
+    },
+    {
+        "authorName": "David Nicholls",
+        "authorPic": "../media/authors/david.png",
+        "authorGenre": "Contemporary Fiction, Romance",
+        "totalNumberOfBooks": 5,
+        "age": 57
+    },
+    {
+        "authorName": "Ian McEwan",
+        "authorPic": "../media/authors/ian.png",
+        "authorGenre": "Historical Fiction, Literary Fiction",
+        "totalNumberOfBooks": 17,
+        "age": 75
+    }
+]

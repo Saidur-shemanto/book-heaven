@@ -18,7 +18,7 @@ const WishList = () => {
 
 
     return (
-        <div className="w-full">
+        <div className="w-full flex flex-col gap-2">
             {wishBooks.map(book => <WishIndiv key={book.bookId} book={book}></WishIndiv>)}
 
         </div>

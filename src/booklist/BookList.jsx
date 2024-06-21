@@ -10,7 +10,7 @@ export default function BookList() {
 
     }, [])
     return (
-        <div>
+        <div className="mt-4">
             <p className="font-bold text-4xl text-center">Books</p>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
                 {books.map(book => <BookIndiv key={book.bookId} book={book}></BookIndiv>)}

@@ -9,7 +9,6 @@ const Read = () => {
     const readList = getRead();
     const books = useLoaderData();
     const readBooks = books.filter(book => readList.includes(String(book.bookId)))
-    console.log(menu)
     if (menu !== "") {
         readBooks.sort((a, b) => b[menu] - a[menu]);
     }
@@ -19,7 +18,7 @@ const Read = () => {
 
 
     return (
-        <div className="w-full">
+        <div className="w-full flex flex-col gap-2">
             {readBooks.map(book => <ReadIndiv key={book.bookId} book={book}></ReadIndiv>)}
 
         </div>

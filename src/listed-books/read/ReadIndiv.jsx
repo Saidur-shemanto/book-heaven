@@ -9,26 +9,26 @@ const ReadIndiv = ({ book }) => {
                 <img className="w-[8rem] h-[12rem]" src={book.image} alt="" />
             </div>
             <div className="flex flex-col gap-4">
-                <p>{book.bookName}</p>
-                <p>by: {book.author}</p>
-                <div className="flex">
-                    <p>Tag</p>
-                    <div className="flex">
-                        {book.tags.map(id => <p className="bg-[#23BE0A0D] rounded-3xl text-[#23BE0A]">#{id}</p>)}
+                <p className="font-bold text-2xl">{book.bookName}</p>
+                <p className="font-medium text-base">By: {book.author}</p>
+                <div className="flex flex items-center gap-2">
+                    <p className="font-bold text-base">Tag</p>
+                    <div className="flex justify-center items-center">
+                        {book.tags.map(id => <p className="bg-[#23BE0A0D] rounded-3xl text-[#23BE0A] p-1">#{id}</p>)}
                     </div>
-                    <div className="flex">
+                    <div className="flex justify-center items-center gap-1">
                         <CiLocationOn />
                         <p>Year of publishing: {book.yearOfPublishing}</p>
 
                     </div>
                 </div>
-                <div className="flex gap-5">
-                    <div className="flex justify-center items-center gap-2">
+                <div className="flex gap-4">
+                    <div className="flex justify-center items-center gap-1">
                         <GoPeople />
                         <p>Publisher: {book.publisher}</p>
 
                     </div>
-                    <div className="flex justify-center items-center gap-2">
+                    <div className="flex justify-center items-center gap-1">
                         <IoDocumentTextOutline />
                         <p>Page {book.totalPages}</p>
                     </div>

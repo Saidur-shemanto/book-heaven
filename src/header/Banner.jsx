@@ -1,6 +1,6 @@
 export default function Banner() {
     return (
-        <div className="hero bg-base-200 container mx-auto rounded-3xl py-20">
+        <div className="hero bg-base-200 container mx-auto rounded-3xl py-20 mt-4">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src="/media/bannerimg.png" className="max-w-sm max-h-96 rounded-lg " />
                 <div className="flex flex-col gap-12">
