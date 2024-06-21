@@ -1,9 +1,19 @@
 import { useLoaderData, useParams } from "react-router-dom"
+import { setRead, setWish } from "../utility/localStorage"
 
 export default function BookDetails() {
     const id = useParams()
     const books = useLoaderData()
     const book = books.find(book => book.bookId === parseInt(id.bookId))
+    const handleRead = () => {
+        setRead(String(id.bookId))
+
+
+
+    }
+    const handleWish = () => {
+        setWish(String(id.bookId))
+    }
 
 
 
@@ -29,8 +39,8 @@ export default function BookDetails() {
                     <p>Rating: <span className="font-semibold">{book.rating}</span></p>
                 </div>
                 <div className="flex gap-4">
-                    <button className="btn px-7 py-4">Read</button>
-                    <button className="btn bg-[#50B1C9] px-7 py-4">WishList</button>
+                    <button onClick={handleRead} className="btn px-7 py-4">Read</button>
+                    <button onClick={handleWish} className="btn bg-[#50B1C9] px-7 py-4">WishList</button>
                 </div>
             </div>
 
