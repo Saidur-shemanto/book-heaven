@@ -1,8 +1,11 @@
-# React + Vite
+# Book Heaven
+Technology used: HTML, CSS, Tailwind, React </br>
+Live site: [Live link](biblio-heaven.surge.sh) </br>
+This website has:-
+- A beutiful and simplified user interface that is understandable to all kind of users
+- User can add books to their wishlist and read list
+- User can have a graphical view of how many pages they have to read
+- User can see the details of the authors
+- User can view the comparisons of all book ratings
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
