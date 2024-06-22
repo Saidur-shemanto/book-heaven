@@ -34,7 +34,7 @@ export default function BookDetails() {
     return (
         <div className="flex flex-col lg:flex-row container mx-auto h-full gap-12">
             <img src={book.image} alt="" className="w-[36rem] h-[45rem] rounded-2xl" />
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 pl-2 lg:pl-0">
                 <p className="text-5xl font-bold">{book.bookName}</p>
                 <p className="text-xl font-medium">by: {book.author}</p>
                 <hr />

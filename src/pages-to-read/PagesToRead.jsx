@@ -20,10 +20,9 @@ export default function PagesToRead() {
     };
 
     return (
-        <ResponsiveContainer height={600}>
+        <ResponsiveContainer width="95%" height={500}>
             <BarChart
-                width={900}
-                height={600}
+
                 data={readBooks}
                 margin={{
                     top: 20,
@@ -41,7 +40,7 @@ export default function PagesToRead() {
                     ))}
                 </Bar>
             </BarChart>
-        </ResponsiveContainer>
+        </ResponsiveContainer >
 
 
     )
