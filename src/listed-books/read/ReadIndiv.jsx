@@ -1,7 +1,6 @@
 import { CiLocationOn } from "react-icons/ci";
 import { GoPeople } from "react-icons/go";
 import { IoDocumentTextOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
 const ReadIndiv = ({ book }) => {
     return (
         <div className="flex flex-col lg:flex-row gap-6 border rounded-2xl p-6 items-center lg:items-start">
@@ -14,7 +13,7 @@ const ReadIndiv = ({ book }) => {
                 <div className="flex items-center gap-2">
                     <p className="font-bold text-base">Tag</p>
                     <div className="flex justify-center items-center">
-                        {book.tags.map(id => <p className="bg-[#23BE0A0D] rounded-3xl text-[#23BE0A] p-1">#{id}</p>)}
+                        {book.tags.map(id => <p key={id} className="bg-[#23BE0A0D] rounded-3xl text-[#23BE0A] p-1">#{id}</p>)}
                     </div>
                     <div className="flex justify-center items-center gap-1">
                         <CiLocationOn />

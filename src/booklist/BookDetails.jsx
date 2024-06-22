@@ -41,7 +41,14 @@ export default function BookDetails() {
                 <p className="text-xl font-medium">{book.category}</p>
                 <hr />
                 <p><span className="font-bold">Review:</span> {book.review}</p>
-                <p className="font-bold">Tag: </p>
+                <div className="flex gap-4 items-center">
+                    <p className="font-bold text-base">Tag</p>
+                    <div className="flex">
+                        {book.tags.map(id => <p key={id} className="bg-[#23BE0A0D] rounded-3xl text-[#23BE0A] p-1">#{id}</p>)}
+                    </div>
+
+                </div>
+
                 <hr />
                 <div>
 
