@@ -1,8 +1,11 @@
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import { getRead } from '../utility/localStorage';
 import { useLoaderData } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../authentication/AuthProvider';
 export default function PagesToRead() {
-    const readList = getRead();
+    const { user } = useContext(AuthContext)
+    const readList = getRead(user.uid);
     const books = useLoaderData();
     const readBooks = books.filter(book => readList.includes(String(book.bookId)))
     const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];

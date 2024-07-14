@@ -1,7 +1,18 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import './navbar.css'
+import { useContext } from "react";
+import { AuthContext } from "../authentication/AuthProvider";
 
 const NavBar = () => {
+    const navigate = useNavigate()
+    const { user, logout } = useContext(AuthContext)
+    const handleLogout = () => {
+        logout()
+            .then()
+            .catch()
+        navigate('/')
+
+    }
     const links = <>
         <li ><NavLink to="/" className="navlist">Home</NavLink></li>
         <li><NavLink to="listed-books" className="navlist">Listed Books</NavLink></li>
@@ -30,8 +41,24 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-2">
-                    <a className="btn bg-[#23BE0A] text-white">Sign In</a>
-                    <a className="btn bg-[#59C6D2] text-white">Sign Up</a>
+                    {user ?
+                        <div className="flex gap-2 justify-center items-center">
+                            <p className="lg:block hidden">{user.displayName}</p>
+                            <button className="btn text-white bg-[#23BE0A]" onClick={handleLogout}>Log Out</button>
+
+                        </div>
+
+
+                        :
+                        <div>
+                            <Link to="/login" className="btn bg-[#23BE0A] text-white">Sign In</Link>
+                            <Link to='/signup' className="btn bg-[#59C6D2] text-white">Sign Up</Link>
+
+                        </div>}
+
+
+
+
                 </div>
             </div>
         </>

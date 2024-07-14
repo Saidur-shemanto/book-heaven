@@ -2,13 +2,16 @@ import { useLoaderData, useParams } from "react-router-dom"
 import { setRead, setWish } from "../utility/localStorage"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useContext } from "react";
+import { AuthContext } from "../authentication/AuthProvider";
 
 export default function BookDetails() {
     const id = useParams()
     const books = useLoaderData()
     const book = books.find(book => book.bookId === parseInt(id.bookId))
+    const { user } = useContext(AuthContext)
     const handleRead = () => {
-        const res = setRead(String(id.bookId))
+        const res = setRead(user.uid, String(id.bookId))
         if (res) {
             toast.success("Added to read!");
         } else {
@@ -20,7 +23,7 @@ export default function BookDetails() {
 
     }
     const handleWish = () => {
-        const res = setWish(String(id.bookId))
+        const res = setWish(user.uid, String(id.bookId))
         if (res) {
             toast.success("Added to WishList");
         } else {

@@ -1,5 +1,5 @@
-const getWish = () => {
-    const wishList = localStorage.getItem('wish');
+const getWish = (uid) => {
+    const wishList = localStorage.getItem(`${uid}-wish`);
     if (wishList) {
         return JSON.parse(wishList)
     } else {
@@ -8,9 +8,9 @@ const getWish = () => {
 
 
 }
-const setWish = (id) => {
-    const wishList = getWish()
-    const readList = getRead()
+const setWish = (uid, id) => {
+    const wishList = getWish(uid)
+    const readList = getRead(uid)
 
     if (wishList.includes(id) || readList.includes(id)) {
         return false
@@ -18,7 +18,7 @@ const setWish = (id) => {
 
     } else {
         wishList.push(id)
-        localStorage.setItem('wish', JSON.stringify(wishList))
+        localStorage.setItem(`${uid}-wish`, JSON.stringify(wishList))
         return true
     }
 
@@ -26,8 +26,8 @@ const setWish = (id) => {
 }
 
 
-const getRead = () => {
-    const readList = localStorage.getItem('read');
+const getRead = (uid) => {
+    const readList = localStorage.getItem(`${uid}-read`);
     if (readList) {
         return JSON.parse(readList)
     } else {
@@ -37,9 +37,9 @@ const getRead = () => {
 
 }
 
-const setRead = (id) => {
-    const readList = getRead()
-    let wishList = getWish()
+const setRead = (uid, id) => {
+    const readList = getRead(uid)
+    let wishList = getWish(uid)
 
     if (readList.includes(id)) {
         return false
@@ -48,8 +48,8 @@ const setRead = (id) => {
     } else {
         readList.push(id)
         wishList = wishList.filter(wish => wish !== id)
-        localStorage.setItem('read', JSON.stringify(readList))
-        localStorage.setItem('wish', JSON.stringify(wishList))
+        localStorage.setItem(`${uid}-read`, JSON.stringify(readList))
+        localStorage.setItem(`${uid}-wish`, JSON.stringify(wishList))
         return true
     }
 

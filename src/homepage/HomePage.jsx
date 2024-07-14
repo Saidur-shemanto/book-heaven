@@ -6,7 +6,11 @@ export default function HomePage() {
     return (
         <>
             <NavBar></NavBar>
-            <Outlet></Outlet>
+            <div className="min-h-[70vh]">
+                <Outlet></Outlet>
+
+            </div>
+
             <Footer></Footer>
         </>
     )

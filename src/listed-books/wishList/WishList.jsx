@@ -3,11 +3,14 @@ import { getWish } from "../../utility/localStorage";
 import WishIndiv from "./WishIndiv";
 import { useContext } from "react";
 import { AsserContext } from "../ListedBooks";
+import { AuthContext } from "../../authentication/AuthProvider";
 
 
 const WishList = () => {
     const menu = useContext(AsserContext)
-    const wishList = getWish();
+    const { user } = useContext(AuthContext)
+    const wishList = getWish(user.uid);
+
     const books = useLoaderData();
     const wishBooks = books.filter(book => wishList.includes(String(book.bookId)))
     if (menu !== "") {

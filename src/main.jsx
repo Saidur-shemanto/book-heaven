@@ -2,81 +2,17 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
-  createBrowserRouter,
-  Navigate,
   RouterProvider,
 } from "react-router-dom";
-import Home from './homepage/Home.jsx';
-import HomePage from './homepage/HomePage.jsx';
-import ListedBooks from './listed-books/ListedBooks.jsx';
-import PagesToRead from './pages-to-read/PagesToRead.jsx';
-import BookDetails from './booklist/BookDetails.jsx';
-import Read from './listed-books/read/Read.jsx';
-import WishList from './listed-books/wishList/WishList.jsx';
-import ErrorHandle from './error/ErrorHandle.jsx';
-import Authors from './authors/Authors.jsx';
-import Ratings from './ratings/Ratings.jsx';
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomePage></HomePage>,
-    errorElement: <ErrorHandle></ErrorHandle>,
-    children: [
-      {
-        path: "/",
-        element: <Home></Home>,
-      },
-      {
-        path: "listed-books",
-        element: <ListedBooks></ListedBooks>,
-        children: [
-          {
-            path: '/listed-books',
-            element: <><Navigate to={'/listed-books/read'} /></>
+import router from './routes/PublicRoutes';
+import AuthProvider from './authentication/AuthProvider';
 
 
-          },
-          {
-            path: "read",
-            index: true,
-            element: <Read></Read>,
-            loader: () => fetch("/data/books.json")
-
-          },
-          {
-            path: "wishlist",
-            element: <WishList></WishList>,
-            loader: () => fetch("/data/books.json")
-
-          },
-        ],
-      },
-      {
-        path: "pages-to-read",
-        element: <PagesToRead></PagesToRead>,
-        loader: () => fetch("/data/books.json"),
-      },
-      {
-        path: "books/:bookId",
-        element: <BookDetails></BookDetails>,
-        loader: () => fetch("/data/books.json"),
-      },
-      {
-        path: "authors",
-        element: <Authors></Authors>,
-      },
-      {
-        path: "ratings",
-        element: <Ratings></Ratings>,
-        loader: () => fetch("/data/books.json"),
-      },
-
-    ],
-  },
-]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
